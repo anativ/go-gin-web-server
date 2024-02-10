@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-
+	ConnectDB()
 	ConfigRuntime()
 	StartWorkers()
 	StartGin()
