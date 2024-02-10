@@ -10,6 +10,8 @@ import (
 )
 
 func main() {
+	pgURL := os.Getenv("PG_URL")
+	fmt.Printf("PG_URL: %s\n", pgURL)
 	ConfigRuntime()
 	StartWorkers()
 	StartGin()
@@ -45,6 +47,6 @@ func StartGin() {
 		port = "8080"
 	}
 	if err := router.Run(":" + port); err != nil {
-        log.Panicf("error: %s", err)
+		log.Panicf("error: %s", err)
 	}
 }
