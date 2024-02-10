@@ -7,6 +7,8 @@ import (
 	"os"
 	"runtime"
 
+	_ "github.com/lib/pq"
+
 	"github.com/gin-gonic/gin"
 )
 
